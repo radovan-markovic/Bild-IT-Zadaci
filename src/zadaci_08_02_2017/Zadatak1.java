@@ -7,8 +7,6 @@ import org.omg.Messaging.SyncScopeHelper;
 
 public class Zadatak1 {
 
-	private static Integer b;
-
 	public static void main(String[] args) {
 		
 		//kreiramo listu koja prihvata integere
