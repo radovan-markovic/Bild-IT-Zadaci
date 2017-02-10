@@ -30,13 +30,25 @@ public class Zadatak1 {
 		int brojacIspisa = 0;
 		//pomocu petlje ispisujemo zeljene brojeve od pocetne do krajnje vrijednosti
 		for (int i = pocetnaVrijednost; i<= krajnjaVrijednost; i++){
-			System.out.print(i+" ");
-			brojacIspisa++;
-			//pravimo novi red ako smo ispisali proslijedjeni broj brojeva po liniji
-			if (brojacIspisa % brojBrojevaPoLiniji == 0){
-				System.out.println();
+			//provjeravamo da li je broj prost i ako jeste ispisujemo ga
+			if (isPrime (i)){
+				System.out.print(i + " ");
+				brojacIspisa++;
+				//pravimo novi red ako smo ispisali broj brojeva po liniji
+				if (brojacIspisa % brojBrojevaPoLiniji == 0){
+					System.out.println();
+				}
 			}
+			
 		}
 	}
-
+	
+	//metoda koja provjerava da li je broj prost
+	public static boolean isPrime(int n) {
+	    for(int i=2;i<n;i++) {
+	        if(n%i==0)
+	            return false;
+	    }
+	    return true;
+	}
 }
