@@ -13,16 +13,21 @@ public class Zadatak2 {
 		//pamtimo broj kao string da bi imali 0 na pocetku broja
 		String broj = input.nextLine();
 
-		
-				
 		//provjeravamo unos
 		String provjeriDuzinu = broj+"";
-		int k = 0;
-		while (Character.isLetter(broj.charAt(k)) || provjeriDuzinu.length() != 9){
-			System.out.println("Pogresan unos, unesite  9 brojeva:");
+
+		while (provjeriDuzinu.length() != 9){
+			System.out.println("Pogresan unos, unesite 9 brojeva:");
 			broj = input.nextLine();
 			provjeriDuzinu = broj+"";
-			k++;
+
+			for (int j = 0; j<broj.length(); j++){
+				if (Character.isLetter(broj.charAt(j))){
+					System.out.println("Pogresan unos, unesite  9 brojeva:");
+					broj = input.nextLine();
+					provjeriDuzinu = broj+"";
+				}
+			}
 		}	
 
 		int suma = 0;
