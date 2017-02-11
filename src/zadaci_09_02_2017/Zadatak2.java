@@ -28,23 +28,27 @@ public static void pitanja(int broj){
 
 				try{//pravimo provjeru za unos
 					unos = input.nextInt();
+					
+					rezultat = broj1 + broj2;
 					//inkrementiramo broj postavljenih pitanja za 1 kako bi kontrolisali petlju
 					brojac++;
+					//ako je rezultat odgovara tacan uvecavamo broj tacnih odgovora za 1, a ako ne
+					//uvecavamo broj netacnih odgovora za 1
+					if (unos == rezultat){
+						tacni++;
+					}else{
+						netacni++;
+					}
 					test2 = false;
 				}catch (Exception e){
 					System.out.println("Morate unijeti broj, unesite ponovo:");
 					input.nextLine();
+					
 				}
 			
-			rezultat = broj1 + broj2;
 			
-			//ako je rezultat odgovara tacan uvecavamo broj tacnih odgovora za 1, a ako ne
-			//uvecavamo broj netacnih odgovora za 1
-			if (unos == rezultat){
-				tacni++;
-			}else{
-				netacni++;
-			}
+			
+			
 		}
 		//ispisujemo broj tacnih i netacnih odgovora
 		System.out.println("Tacnih odgovara: " + tacni);
