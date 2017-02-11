@@ -6,12 +6,14 @@ public class Zadatak2 {
 	
 public static void pitanja(int broj){
 		
+		boolean test2 = true;
 		int brojac = 0;
 		int tacni = 0;
 		int netacni = 0;
 		int broj1 = 0;
 		int broj2 = 0;
 		int rezultat = 0;
+		
 		
 		Scanner input = new Scanner(System.in);
 
@@ -22,11 +24,21 @@ public static void pitanja(int broj){
 			broj2 = (int)(Math.random()*10);
 			
 			System.out.println("Koliko je " + broj1 + " + " + broj2 + "?");
-			int unos = input.nextInt();
+			int unos = 0;
+
+				try{//pravimo provjeru za unos
+					unos = input.nextInt();
+					brojac++;
+					test2 = false;
+				}catch (Exception e){
+					System.out.println("Morate unijeti broj, unesite ponovo:");
+					input.nextLine();
+				}
+			
 			rezultat = broj1 + broj2;
 			
 			//inkrementiramo broj postavljenih pitanja za 1 kako bi kontrolisali petlju
-			brojac++;
+			
 			
 			//ako je rezultat odgovara tacan uvecavamo broj tacnih odgovora za 1, a ako ne
 			//uvecavamo broj netacnih odgovora za 1
