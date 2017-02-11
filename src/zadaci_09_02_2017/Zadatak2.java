@@ -28,6 +28,7 @@ public static void pitanja(int broj){
 
 				try{//pravimo provjeru za unos
 					unos = input.nextInt();
+					//inkrementiramo broj postavljenih pitanja za 1 kako bi kontrolisali petlju
 					brojac++;
 					test2 = false;
 				}catch (Exception e){
@@ -36,9 +37,6 @@ public static void pitanja(int broj){
 				}
 			
 			rezultat = broj1 + broj2;
-			
-			//inkrementiramo broj postavljenih pitanja za 1 kako bi kontrolisali petlju
-			
 			
 			//ako je rezultat odgovara tacan uvecavamo broj tacnih odgovora za 1, a ako ne
 			//uvecavamo broj netacnih odgovora za 1
