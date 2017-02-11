@@ -44,10 +44,20 @@ public static void pitanja(int broj){
 
 	public static void main(String[] args) {
 		
+		boolean test = true;
 		Scanner input = new Scanner(System.in);
-		System.out.println("Koliko zelite pitanja:");
-		int unos = input.nextInt();
+		int unos = 0;
 		
+		while(test){//pravimo provjeru za unos
+			try{
+				System.out.println("Koliko zelite pitanja:");
+				unos = input.nextInt();
+				test = false;
+			}catch(Exception e){
+				System.out.println("Nepravilan unos, unesite ponovo:");
+				input.nextLine();
+			}
+		}
 		//prosljedjujemo metodi broj pitanja
 		pitanja(unos);
 

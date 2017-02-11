@@ -6,9 +6,20 @@ public class Zadatak4 {
 
 	public static void main(String[] args) {
 		
+		boolean test = true;
+		int brojBacanja = 0;
 		Scanner input = new Scanner(System.in);
-		System.out.println("Koliko elemenata po redu i koloni zelite u matrici:");
-		int brojBacanja = input.nextInt();
+		
+		while(test){//pravimo provjeru za unos
+			try{
+				System.out.println("Koliko elemenata po redu i koloni zelite u matrici:");
+				brojBacanja = input.nextInt();
+				test = false;
+			}catch(Exception e){
+				System.out.println("Nepravilan unos, unesite ponovo:");
+				input.nextLine();
+			}
+		}
 		
 		//prosljedjujemo metodi koliko elemenata zelimo u matrici
 		printMatrix(brojBacanja);

@@ -30,9 +30,19 @@ public static void bacaj(int brojac){
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("Koliko zelite puta baciti novcic?");
-		int brojBacanja = input.nextInt();
+		int brojBacanja = 0;
+		boolean test = true;
 		
+		while(test){//pravimo provjeru za unos
+			try{
+				System.out.println("Koliko zelite puta baciti novcic?");
+				brojBacanja = input.nextInt();
+				test = false;
+			}catch(Exception e){
+				System.out.println("Nepravilan unos, unesite ponovo:");
+				input.nextLine();
+			}
+		}
 		//prosljedjujemo metodi koliko puta zelimo baciti novcic
 		bacaj(brojBacanja);
 	
