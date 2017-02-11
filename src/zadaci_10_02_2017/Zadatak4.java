@@ -28,26 +28,45 @@ public class Zadatak4 {
 
 	public static void main(String[] args) {
 		
+		boolean test = true;
+		boolean test2 = true;
 		Scanner input = new Scanner(System.in);
+		int redovi = 0;
+		int kolone = 0;
 		
-		//unosimo koliko zelimo redova u 2D nizu
-		System.out.println("Unesite broj redova");
-		int redovi = input.nextInt();
+		while (test){//testiramo unos
+			try{
+				//unosimo koliko zelimo redova u 2D nizu
+				System.out.println("Unesite broj redova");
+				redovi = input.nextInt();
+				
+				//unosimo koliko zelimo kolona u 2D nizu
+				System.out.println("Unesite broj kolona");
+				kolone = input.nextInt();
+				test = false;
+			}catch (Exception e){
+				System.out.println("Pogresan unos, unesite ponovo:");
+				input.nextLine();
+			}
+		}	
+				
+				double niz[][] = new double [redovi][kolone];
 		
-		//unosimo koliko zelimo kolona u 2D nizu
-		System.out.println("Unesite broj kolona");
-		int kolone = input.nextInt();
-		
-		double niz[][] = new double [redovi][kolone];
-		
-		//punimo niz
-		System.out.println("Unesite elemente niza:");
-		for (int i = 0; i<niz.length; i++){
-			for (int j = 0; j < niz[i].length; j++){
-				niz[i][j] = input.nextDouble();
+		while (test2){	//testiramo unos
+			try{
+				//punimo niz
+				System.out.println("Unesite elemente niza:");
+				for (int i = 0; i<niz.length; i++){
+					for (int j = 0; j < niz[i].length; j++){
+						niz[i][j] = input.nextDouble();
+					}
+				}
+				test2 = false;
+			}catch (Exception e){
+				System.out.println("Pogresan unos, unesite ponovo:");
+				input.nextLine();
 			}
 		}
-		
 		//ispisujemo niz
 		for (int i = 0; i<niz.length; i++){
 			for (int j = 0; j < niz[i].length; j++){

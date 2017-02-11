@@ -8,16 +8,24 @@ public class Zadatak2 {
 
 	public static void main(String[] args) {
 		
+		boolean test = true;
 		Scanner input = new Scanner(System.in);
 		
 		double[]niz = new double[10];
 		
-		System.out.println("Unesite 10 elemenata u niz:");
-		//punimo niz
-		for(int i = 0; i<niz.length; i++){
-			niz[i] = input.nextDouble();
+		while(test){//pravimo provjeru za unos
+			try{
+				System.out.println("Unesite 10 elemenata u niz:");
+				//punimo niz
+				for(int i = 0; i<niz.length; i++){
+					niz[i] = input.nextDouble();
+				}
+				test = false;
+		}catch(Exception e){
+			System.out.println("Pogresan unos, unesite ponovo:");
+			input.nextLine();
+			}
 		}
-		
 		//ispisujemo najmanji element u nizu
 		System.out.println("Najmanji element u nizu je: " + min(niz));
 

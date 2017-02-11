@@ -7,19 +7,33 @@ public class Zadatak1 {
 
 	public static void main(String[] args) {
 		
+		boolean test = true;
+		int pocetnaVrijednost = 0;
+		int krajnjaVrijednost = 0;
+		int brojBrojevaPoLiniji = 0;
 		Scanner input = new Scanner(System.in);
 		
-		//definisemo pocetnu vrijednost
-		System.out.println("Unesite pocetnu vrijednost:");
-		int pocetnaVrijednost = input.nextInt();
 		
-		//definisemo krajnju vrijednost
-		System.out.println("Unesite krajnju vrijednost:");
-		int krajnjaVrijednost = input.nextInt();
+		while (test){ // testiramo unos
+			try{
+				//definisemo pocetnu vrijednost
+				System.out.println("Unesite pocetnu vrijednost:");
+				pocetnaVrijednost = input.nextInt();
+				
+				//definisemo krajnju vrijednost
+				System.out.println("Unesite krajnju vrijednost:");
+				krajnjaVrijednost = input.nextInt();
+				
+				//definisemo koliko cemo ispisati brojeva u jednom redu
+				System.out.println("Unesite koliko hocete brojeva da se ispise po liniji:");
+				brojBrojevaPoLiniji = input.nextInt();
+				test = false;
+			}catch(Exception e){
+				System.out.println("Pogresan unos, unesite ponovo:");
+				input.nextLine();
+			}
 		
-		//definisemo koliko cemo ispisati brojeva u jednom redu
-		System.out.println("Unesite koliko hocete brojeva da se ispise po liniji:");
-		int brojBrojevaPoLiniji = input.nextInt();
+		}
 		
 		ispisiBrojeve(pocetnaVrijednost, krajnjaVrijednost, brojBrojevaPoLiniji);
 

@@ -17,23 +17,31 @@ public class Zadatak3 {
 
 	public static void main(String[] args) {
 		
+		boolean test = true;
 		int[] niz = new int [5];
 		int[] niz2 = new int [5];
 		
 		Scanner input = new Scanner(System.in);
 		
-		//punimo prvi niz brojevima
-		System.out.println("Unesite 5 brojeva u prvi niz");
-		for (int i = 0; i < niz.length; i++){
-			 niz[i] = input.nextInt();
+		while(test){//pravimo provjeru za unos
+			try{
+				//punimo prvi niz brojevima
+				System.out.println("Unesite 5 brojeva u prvi niz");
+				for (int i = 0; i < niz.length; i++){
+					 niz[i] = input.nextInt();
+				}
+				
+				//punimo drugi niz brojevima
+				System.out.println("Unesite 5 brojeva u u drugi niz");
+				for (int i = 0; i < niz2.length; i++){
+					niz2[i] = input.nextInt();
+				}
+				test = false;
+			}catch(Exception e){
+				System.out.println("Pogresan unos, unesite ponovo:");
+				input.nextLine();
+			}
 		}
-		
-		//punimo drugi niz brojevima
-		System.out.println("Unesite 5 brojeva u u drugi niz");
-		for (int i = 0; i < niz2.length; i++){
-			niz2[i] = input.nextInt();
-		}
-		
 		//pozivamo metodu koja ce porediti elemente dva niza
 		System.out.println(equals(niz, niz2));
 

@@ -8,19 +8,39 @@ import java.util.Scanner;
 public class Zadatak5 {
 
 	public static void main(String[] args) {
-
+		
+		boolean test1  = true;
+		boolean test2  = true;
+		int matrica = 0;
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Unesite velicinu matrice, npr. 3 ce dati matricu 3x3");
-		int matrica = input.nextInt();
+		while (test1) {// pravimo provjeru za unos
+			try {
+					System.out.println("Unesite velicinu matrice, npr. 3 ce dati matricu 3x3");
+					matrica = input.nextInt();
+					test1 = false;
+				} catch (Exception e) {
+					System.out.println("Pogresan unos, unesite ponovo:");
+					input.nextLine();
+				}
+			}
+		
 		//definisemo velicinu 2D niza
 		double niz[][] = new double [matrica][matrica];
 		
-		System.out.println("Unesite brojeve");
-		//punimo 2D niz
-		for (int i = 0; i < niz.length; i++) {
-			for (int j = 0; j < niz[i].length; j++) {
-				niz[i][j] = input.nextDouble();
+		while (test2) {// pravimo provjeru za unos
+			try {
+				System.out.println("Unesite brojeve");
+				//punimo 2D niz
+				for (int i = 0; i < niz.length; i++) {
+					for (int j = 0; j < niz[i].length; j++) {
+						niz[i][j] = input.nextDouble();
+					}
+				}
+				test2 = false;
+			}catch(Exception e){
+				System.out.println("Pogresan unos, unesite ponovo:");
+				input.nextLine();
 			}
 		}
 		//pozivamo metodu za sortiranje redova u matrici
