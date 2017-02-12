@@ -61,15 +61,19 @@ public static void main(String[] args) {
 				brojacIznadProsjeka++;
 			}
 		}
+		
+		System.out.println("Brojevi u nizu su: " + Arrays.toString(niz)); //ispis niza
+		
 		System.out.println("Broj brojeva koji su jednaki prosjeku ili iznad prosjeka je: " + brojacIznadProsjeka);
 		
 		int brojacIspodProsjeka = 0;
 		//trazimo brojeve ispod prosjeka
-		for (int j= 0; j < niz.length; j++){
-			if (niz[j]<prosjek && niz[j] != 0){
+		for (int k= 0; k < niz.length; k++){
+			if (prosjek>niz[k] && niz[k] != 0){
 				brojacIspodProsjeka++;
 			}
 		}
+		
 		System.out.println("Broj brojeva ispod prosjeka je: " + brojacIspodProsjeka);
 	}
 
