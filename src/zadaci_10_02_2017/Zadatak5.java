@@ -15,9 +15,11 @@ public class Zadatak5 {
 		Scanner input = new Scanner(System.in);
 		
 		while (test1) {// pravimo provjeru za unos
-			try {
-					System.out.println("Unesite velicinu matrice, npr. 3 ce dati matricu 3x3");
-					matrica = input.nextInt();
+			try {	
+					while (matrica <= 0){
+						System.out.println("Unesite velicinu matrice, npr. 3 ce dati matricu 3x3");
+						matrica = input.nextInt();
+					}
 					test1 = false;
 				} catch (Exception e) {
 					System.out.println("Pogresan unos, unesite ponovo:");

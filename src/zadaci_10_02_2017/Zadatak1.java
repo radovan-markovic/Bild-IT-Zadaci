@@ -10,7 +10,7 @@ public class Zadatak1 {
 		boolean test = true;
 		int pocetnaVrijednost = 0;
 		int krajnjaVrijednost = 0;
-		int brojBrojevaPoLiniji = 0;
+		int brojBrojevaPoLiniji = -1;
 		Scanner input = new Scanner(System.in);
 		
 		
@@ -25,8 +25,10 @@ public class Zadatak1 {
 				krajnjaVrijednost = input.nextInt();
 				
 				//definisemo koliko cemo ispisati brojeva u jednom redu
-				System.out.println("Unesite koliko hocete brojeva da se ispise po liniji:");
-				brojBrojevaPoLiniji = input.nextInt();
+				while (brojBrojevaPoLiniji < 0){
+					System.out.println("Unesite koliko hocete brojeva da se ispise po liniji:");
+					brojBrojevaPoLiniji = input.nextInt();
+				}
 				test = false;
 			}catch(Exception e){
 				System.out.println("Pogresan unos, unesite ponovo:");

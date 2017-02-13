@@ -31,18 +31,21 @@ public class Zadatak4 {
 		boolean test = true;
 		boolean test2 = true;
 		Scanner input = new Scanner(System.in);
-		int redovi = 0;
-		int kolone = 0;
+		int redovi = -1;
+		int kolone = -1;
 		
 		while (test){//testiramo unos
 			try{
 				//unosimo koliko zelimo redova u 2D nizu
-				System.out.println("Unesite broj redova");
-				redovi = input.nextInt();
-				
+				while (redovi < 0){
+					System.out.println("Unesite broj redova");
+					redovi = input.nextInt();
+				}
 				//unosimo koliko zelimo kolona u 2D nizu
-				System.out.println("Unesite broj kolona");
-				kolone = input.nextInt();
+				while (kolone < 0){
+					System.out.println("Unesite broj kolona");
+					kolone = input.nextInt();
+				}
 				test = false;
 			}catch (Exception e){
 				System.out.println("Pogresan unos, unesite ponovo:");
