@@ -26,7 +26,7 @@ public static void main(String[] args) {
 				double unos = input.nextDouble();
 				
 				//ako je uno jednak 0 prekida se unosu niz
-				while (unos != 0){
+				while (unos != 0 && i<100){
 					niz[i] = unos;
 					suma = suma + niz[i];
 					i++;
