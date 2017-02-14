@@ -11,25 +11,26 @@ public class Zadatak3 {
 		double broj1 = 0;
 		double broj2 = 0;
 		double broj3 = 0;
+		Scanner input = new Scanner(System.in);
 		
-		 do {  // ako je input pogresan unosimo ponovo
+		while (x == 1){  // ako je input pogresan unosimo ponovo
 				try {
-					Scanner input = new Scanner(System.in);
+					
 					System.out.println("Unesite prvi broj: ");
-					broj1 = input.nextDouble();
+					broj1 = Double.parseDouble(input.nextLine());
 					
 					System.out.println("Unesite drugi broj: ");
-					broj2 = input.nextDouble();
+					broj2 = Double.parseDouble(input.nextLine());
 					
 					System.out.println("Unesite treci broj: ");
-					broj3 = input.nextDouble();
+					broj3 = Double.parseDouble(input.nextLine());
 					x = 0;
-					input.close();
 				}
 				catch (Exception e) {
 					System.out.println("Pogresan unos, unesite ponovo:");
 				}
-		 } while (x == 1);
+			
+		 } 
 				
 		displaySortedNumbers(broj1, broj2, broj3); // method calling
 		
