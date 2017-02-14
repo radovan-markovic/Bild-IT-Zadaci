@@ -22,18 +22,32 @@ public class Zadatak1 {
 			}
 		}
 		
-		//pamtimo pocetno stanje broja
-		int pocetnoStanje = broj;
+		
 		int rezultat = 1;
 		//postavljamo pocetno stanje djelilca
 		int djelilac = 2;
+		
+		int brojac = 0;
+		//provjeravamo da li je broj negativan
+		if (broj < 0){
+			
+			brojac++;
+			String str = broj+"";
+			String str2= "";
+			for (int i = 1; i<str.length(); i++){
+				str2 = str2 + str.charAt(i);
+			}
+			broj = Integer.parseInt(str2);
+		}
+		
+		//pamtimo pocetno stanje broja
+		int pocetnoStanje = broj;
 		
 		//vrsimo rastavljanje na proste faktore sve dok proizvod faktora ne bude
 		//jednak broju koji smo unijeli
 		if (broj == 0 || broj == 1){
 			System.out.println(broj);
 		}else{
-		
 			while (rezultat != pocetnoStanje){	
 				//provjeravamo da li se broj moze dijeliti, ako ne inkrementujemo djelilac
 				if (broj % djelilac == 0){
