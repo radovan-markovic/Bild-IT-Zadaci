@@ -30,7 +30,7 @@ public class Zadatak1 {
 		
 		//vrsimo rastavljanje na proste faktore sve dok proizvod faktora ne bude
 		//jednak broju koji smo unijeli
-		if (broj == 0){
+		if (broj == 0 || broj == 1){
 			System.out.println(broj);
 		}else{
 		
