@@ -6,19 +6,21 @@ public class Zadatak1 {
 	public static void main(String[] args) {
 	
 		boolean test = true;
-		double broj = -1;
-		double mjesecnaUplata = -1;
+		double broj = 0;
+		double mjesecnaUplata = 0;
 		Scanner input = new Scanner(System.in);
 		
 		while (test){//testiramo unos
 			try{
-				while (mjesecnaUplata < 0){
+				while (mjesecnaUplata < 1){
 					System.out.println("Unesite mjesecnu uplatnu stopu, npr. 100:");
 					mjesecnaUplata = input.nextDouble();
+					input.nextLine();
 				}
-				while (broj < 0){
-					System.out.println("Unesite mjesece");	
+				while (broj < 1){
+					System.out.println("Unesite mjesece");
 					broj = input.nextDouble();
+					input.nextLine();
 				}
 				test = false;
 			}catch(Exception e){
