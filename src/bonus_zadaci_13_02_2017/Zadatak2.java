@@ -13,10 +13,12 @@ public class Zadatak2 {
 		while (test){
 			try{
 				System.out.println("Unesite godine:");
-				godine = Long.parseLong(input.nextLine());
+				godine = input.nextLong();
+				input.nextLine();
 				test = false;
 			}catch (Exception e){
 				System.out.println("Nepravilan unos.");
+				input.nextLine();
 			}
 		}
 		
