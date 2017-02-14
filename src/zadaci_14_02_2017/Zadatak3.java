@@ -14,10 +14,12 @@ public class Zadatak3 {
 			while(test){//provjeravamo unos
 				try{
 					System.out.println("Unesite cijeli broj: ");
-					broj = Integer.parseInt(input.nextLine());					
+					broj = input.nextInt();
+					input.nextLine();
 					test = false;	
 				}catch (Exception e){
 					System.out.println("Pogresan unos:");
+					input.nextLine();
 				}
 			}
 			

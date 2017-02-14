@@ -16,15 +16,18 @@ public class Zadatak2 {
 			try{
 				while (broj1 < 1){
 					System.out.println("Unesite pocetnu godinu:");
-					broj1 = Integer.parseInt(input.nextLine());
+					broj1 = input.nextInt();
+					input.nextLine();
 				}
 				while (broj2 < 1 || broj2 <= broj1){
 					System.out.println("Unesite krajnju godinu, krajnja godina ne moze biti manja ili jednaka pocetnoj:");
-					broj2 = Integer.parseInt(input.nextLine());
+					broj2 = input.nextInt();
+					input.nextLine();
 				}
 				test = false;
 			}catch(Exception e){
 				System.out.println("Nepravilan unos unesite ponovo:");
+				input.nextLine();
 			}
 		}
 		

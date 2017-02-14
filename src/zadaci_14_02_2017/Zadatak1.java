@@ -15,19 +15,23 @@ public class Zadatak1 {
 			try{
 				while (iznosInvesticije < 1){
 					System.out.println("Unesite iznos investicije:");
-					iznosInvesticije = Double.parseDouble(input.nextLine());
+					iznosInvesticije = input.nextDouble();
+					input.nextLine();
 				}
 				while (interesnaStopa < 1){
 					System.out.println("Unesite interesnu stopu:");
-					interesnaStopa = Double.parseDouble(input.nextLine());
+					interesnaStopa = input.nextDouble();
+					input.nextLine();
 				}
 				while (brojGodina < 1){
 					System.out.println("Unesite godine:");
-					brojGodina =  Integer.parseInt(input.nextLine()); 
+					brojGodina =  input.nextInt();
+					input.nextLine(); 
 				}
 				test = false;
 			}catch(Exception e){
 				System.out.println("Nepravilan unos unesite ponovo");
+				input.nextLine();
 			}
 		}
 		

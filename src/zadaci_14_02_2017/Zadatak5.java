@@ -15,15 +15,18 @@ public class Zadatak5 {
 			try{
 				while (brzina < 1){
 					System.out.println("Unesite brzinu v:");
-					brzina = Double.parseDouble(input.nextLine());
+					brzina = input.nextDouble();
+					input.nextLine();
 				}
 				while (ubrzanje < 1){
 					System.out.println("Unesite ubrzanje a:");
-					ubrzanje = Double.parseDouble(input.nextLine());
+					ubrzanje = input.nextDouble();
+					input.nextLine();
 				}
 				test = false;
 			}catch(Exception e){
 				System.out.println("Nepravilan unos unesite ponovo:");
+				input.nextLine();
 			}
 		}
 		
