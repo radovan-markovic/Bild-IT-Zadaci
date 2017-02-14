@@ -14,15 +14,26 @@ public class Zadatak1 {
 			try{
 				while (mjesecnaUplata < 1){
 					System.out.println("Unesite mjesecnu uplatnu stopu, npr. 100:");
-					mjesecnaUplata = Double.parseDouble(input.nextLine());
-				}
-				while (broj < 1){
-					System.out.println("Unesite mjesece");
-					broj = Double.parseDouble(input.nextLine());
+					mjesecnaUplata = input.nextDouble();
+					input.nextLine();
 				}
 				test = false;
 			}catch(Exception e){
 				System.out.println("Nepravilan unos unesite ponovo");
+				input.nextLine();
+			}
+		}
+		test = true;
+		while (test){//testiramo unos
+			try{
+				while (broj < 1){
+					System.out.println("Unesite mjesece");
+					broj = input.nextDouble();
+				}
+				test = false;
+			}catch(Exception e){
+				System.out.println("Nepravilan unos unesite ponovo");
+				input.nextLine();
 			}
 		}
 		double stednja = 0;
