@@ -23,6 +23,7 @@ public class Zadatak3 {
 			
 			System.out.println("Obrnuti broj je: " + reverse(broj));
 			
+			//ispisujemo da li je broj palindrom ili ne
 			if (isPalindrome(broj)){
 				System.out.println("Broj je palindrom.");
 			}else{

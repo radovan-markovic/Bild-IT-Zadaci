@@ -27,6 +27,7 @@ public class Zadatak5 {
 			}
 		}
 		
+		//ispisujemo rezultat
 		double rezultat = ((brzina*brzina) / (2*ubrzanje));
 		
 		System.out.printf("Duzina piste je: " + "%.3f" , rezultat);
