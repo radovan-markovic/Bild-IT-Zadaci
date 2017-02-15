@@ -59,6 +59,7 @@ public class Zadatak1 {
 			i++;			
 		}
 		}
+		input.close();
 	}
 
 }

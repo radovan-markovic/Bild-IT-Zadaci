@@ -29,7 +29,7 @@ public class Zadatak4 {
 		for(int i = 0; i<niz.length; i++){
 			System.out.print(niz[i] + " ");
 		}
-		
+		input.close();
 	}
 
 }

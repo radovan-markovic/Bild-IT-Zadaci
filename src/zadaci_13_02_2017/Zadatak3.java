@@ -43,7 +43,7 @@ public class Zadatak3 {
 		//ispisujemo zajednicki prefix
 		else
 			System.out.println("Najveci zajednicki prefix je: "+ veliki.substring(0, index));
-	    
+	    input.close();
 	}
 
 

@@ -15,6 +15,7 @@ public class Zadatak5 {
 		
 		//pozivamo metodu koja vraca broj slova u stringu
 		System.out.println("Broj slova u stringu je: " + countLetters(str));
+		input.close();
 	}
 	
 	//metoda koj vraca broj slova u stringu
