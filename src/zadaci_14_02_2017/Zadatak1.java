@@ -39,6 +39,7 @@ public class Zadatak1 {
 		double mjesecnaInteresnaStopa = (interesnaStopa/12/100);
 		double buducaVrijednostInvesticije = iznosInvesticije * Math.pow(1 + mjesecnaInteresnaStopa, (brojGodina * 12));
 		System.out.printf("%.3f",buducaVrijednostInvesticije);
+		input.close();
 	}
 
 }

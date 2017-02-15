@@ -31,7 +31,7 @@ public class Zadatak3 {
 			}else{
 				System.out.println("Broj nije palindrom.");
 			}
-		
+		input.close();
 	}
 	
 	//metoda vraca broj naopako

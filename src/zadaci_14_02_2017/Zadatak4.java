@@ -15,7 +15,7 @@ public class Zadatak4 {
 		for (int i = 0;  i<str.length(); i+=2){
 			System.out.print(str.charAt(i));
 		}
-
+		input.close();
 	}
 
 }

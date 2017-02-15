@@ -44,6 +44,7 @@ public class Zadatak2 {
 						}
 					}
 				}
+		input.close();
 	}
 
 }
