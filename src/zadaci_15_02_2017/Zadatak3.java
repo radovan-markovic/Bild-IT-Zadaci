@@ -89,7 +89,7 @@ public class Zadatak3 {
 				test2 = false;
 			}
 			if (test2){//ukoliko unos nije dobar, unosimo ponovo
-				System.out.println("Pojusajte ponovo unijeti mjesec sa 3 slova."
+				System.out.println("Pokusajte ponovo unijeti mjesec sa 3 slova."
 						+ " Npr. za Januar unesite Jan");
 				mjesec = input.nextLine();
 			}
