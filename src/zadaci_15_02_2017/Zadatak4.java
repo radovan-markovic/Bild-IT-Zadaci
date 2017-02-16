@@ -6,6 +6,8 @@ public static void main(String[] args) {
 		
 		int suma = 0;
 		
+		System.out.println("Savrseni brojevi su:");
+		
 		//ispis savrsenog broja
 		for (int i=2; i<=10000; i++){
 			
