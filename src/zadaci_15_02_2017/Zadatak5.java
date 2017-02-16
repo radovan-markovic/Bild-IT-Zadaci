@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Zadatak5 {
 
-	public static void password(String str) {
+	public static boolean password(String str) {
 
 		int duzina = str.length();
 		boolean password = true;
@@ -23,24 +23,24 @@ public class Zadatak5 {
 						}
 
 					} else {
-						System.out.println("Nije validan password");
 						password = false;
 						break;
 					}				
 				
 			}
 			if (password){
-				//ako je provjera zadovoljena passwor je ispravan
+				//ako je provjera zadovoljena password je ispravan
 				if (brojac >= 2 && password) {
-					System.out.println("Password je validan");
+					return true;
 				} else {
-					System.out.println("Nije validan password");
+					return false;
 				}
 			}
 
 		} else {
-			System.out.println("Nije validan password");
+			return false;
 		}
+		return false;
 	}
 
 	public static void main(String[] args) {
@@ -50,7 +50,11 @@ public class Zadatak5 {
 
 		String str = input.nextLine();
 
-		password(str);
+		if (password(str)){
+			System.out.println("Password je validan");
+		}else{
+			System.out.println("Password nije validan.");
+		}
 		
 		input.close();
 	}
