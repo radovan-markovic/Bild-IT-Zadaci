@@ -8,22 +8,24 @@ public class Zadatak2 {
 		
 		Scanner input = new Scanner(System.in);
 		
-		double x1 = 0.0;
-		double x2 = 0.0;
-		double y1 = 0.0;
-		double y2 = 0.0;
+		double x1 = 91.0;
+		double x2 = 91.0;
+		double y1 = 181.0;
+		double y2 = 181.0;
 		boolean test = true;
 		
 		while (test){  // ako je input pogresan unosimo ponovo
 			try {
-				
-				System.out.println("Unesite x1: ");
-				x1 = input.nextDouble();
-				input.nextLine();
-				
-				System.out.println("Unesite y1: ");
-				y1 = input.nextDouble();
-				input.nextLine();
+				while (x1< -90 || x1 > 90){
+					System.out.println("Unesite x1: ");
+					x1 = input.nextDouble();
+					input.nextLine();
+				}
+				while (y1< -180 || y1 > 180){
+					System.out.println("Unesite y1: ");
+					y1 = input.nextDouble();
+					input.nextLine();
+				}
 				test = false;
 			}
 			catch (Exception e) {
@@ -34,13 +36,16 @@ public class Zadatak2 {
 		test = true;
 		while (test){  // ako je input pogresan unosimo ponovo
 			try {
-				System.out.println("Unesite x2: ");
-				x2 = input.nextDouble();
-				input.nextLine();
-				
-				System.out.println("Unesite y2: ");
-				y2 = input.nextDouble();
-				input.nextLine();
+				while (x2< -90 || x2 > 90){
+					System.out.println("Unesite x2: ");
+					x2 = input.nextDouble();
+					input.nextLine();
+				}
+				while (y2< -180 || y2 > 180){
+					System.out.println("Unesite y2: ");
+					y2 = input.nextDouble();
+					input.nextLine();
+				}
 				test = false;
 			}
 			catch (Exception e) {
