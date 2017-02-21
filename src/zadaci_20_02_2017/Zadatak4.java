@@ -33,18 +33,24 @@ public class Zadatak4 {
 					}
 				}
 			
-			//pravimo niz u koji smijestamo cijele brojeve
-			int[] niz = {broj1, broj2, broj3}; 
-			
-			//sortiramo niz
-			Arrays.sort(niz);
-			
-			System.out.println("Brojevi po rastucem redoslijedu su:");
-			System.out.println(niz[0]);
-			System.out.println(niz[1]);
-			System.out.println(niz[2]);
+			sortiraj (broj1, broj2, broj3);
 			
 			input.close();
+	}
+	
+	//metoda koja sortira brojeve po rastucem redoslijedu
+	public static void sortiraj(int broj1, int broj2, int broj3){
+		//pravimo niz u koji smijestamo cijele brojeve
+		int[] niz = {broj1, broj2, broj3}; 
+		
+		//sortiramo niz
+		Arrays.sort(niz);
+		
+		System.out.println("Brojevi po rastucem redoslijedu su:");
+		System.out.println(niz[0]);
+		System.out.println(niz[1]);
+		System.out.println(niz[2]);
+		
 	}
 
 }
