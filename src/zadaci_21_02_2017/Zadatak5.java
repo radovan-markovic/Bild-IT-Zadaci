@@ -15,12 +15,12 @@ public class Zadatak5 {
 		
 		while(test){//testiramo unos cijena
 			try{
-				while (cijena1 < 1){
+				while (cijena1 <= 0){
 					System.out.println("Unesite cijenu prvog pakovanja:");
 					cijena1 = input.nextDouble();
 					input.nextLine();
 				}
-				while (cijena2 < 1){
+				while (cijena2 <= 0){
 					System.out.println("Unesite cijenu drugog pakovanja:");
 					cijena2 = input.nextDouble();
 					input.nextLine();
@@ -35,12 +35,12 @@ public class Zadatak5 {
 		test = true;
 		while(test){//testiramo unos tezina
 			try{
-				while (tezina1 < 1){
+				while (tezina1 <= 0){
 					System.out.println("Unesite tezinu prvog pakovanja:");
 					tezina1 = input.nextDouble();
 					input.nextLine();
 				}
-				while (tezina2 < 1){
+				while (tezina2 <= 0){
 					System.out.println("Unesite tezinu drugog pakovanja:");
 					tezina2 = input.nextDouble();
 					input.nextLine();
