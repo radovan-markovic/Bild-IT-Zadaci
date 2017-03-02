@@ -49,6 +49,7 @@ public class StopWatch {
 		
 		//radimo selection sort
 		selectionSort(niz);
+		System.out.println("Selection sort...");
 		
 		//zaustavljamo stopericu
 		SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss.SSS");
