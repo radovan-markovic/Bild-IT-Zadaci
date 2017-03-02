@@ -54,7 +54,7 @@ public class TicTacToe {
 		while (pobjednik(niz) == false){
 			//Igrac1 igra
 			//testiramo unos reda
-			System.out.println("Unesite broj reda:");
+			System.out.println("Igrac1 unesite broj reda:");
 			while (test){
 				try{
 					brojReda = input.nextInt();
@@ -74,7 +74,7 @@ public class TicTacToe {
 			brojReda = provjeraUnosa(brojReda) - 1;
 			
 			//provjeravamo unos kolone
-			System.out.println("Unesite broj kolone:");
+			System.out.println("Igrac1 unesite broj kolone:");
 			while (test){
 				try{
 					brojKolone = input.nextInt();
@@ -141,7 +141,7 @@ public class TicTacToe {
 			igrac2 = true;
 			//igrac2 igra
 			//testiramo unos reda
-			System.out.println("Unesite broj reda:");
+			System.out.println("Igrac2 unesite broj reda:");
 			while (test){
 				try{
 					brojReda = input.nextInt();
@@ -160,7 +160,7 @@ public class TicTacToe {
 			//provjeravamo da li je unos reda ili kolone prekoracen
 			brojReda = provjeraUnosa(brojReda) - 1;
 
-			System.out.println("Unesite broj kolone:");
+			System.out.println("Igrac2 unesite broj kolone:");
 			//testiramo unos kolone
 			while (test){
 				try{
