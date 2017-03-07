@@ -416,7 +416,7 @@ public class Battleship {
 		}
 	}
 	
-	//na kraju igre prikazujemo raspored brodovo igraca 1 i igraca 2
+	//na kraju igre prikazujemo raspored brodova igraca 1 i igraca 2
 	public static void isipisiMatrice(String matricaIgraca1[][], String matricaIgraca2[][]){
 		
 		System.out.println("Matrica igraca 1");
