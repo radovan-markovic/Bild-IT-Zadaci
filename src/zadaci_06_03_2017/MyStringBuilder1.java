@@ -11,18 +11,16 @@ private String s;
 	
 	//metoda koja dodaje string na postojeci string
 	public MyStringBuilder1 append(MyStringBuilder1 s) {
+		this.s = this.s + s;
 		return new MyStringBuilder1(this.s + s);
 	}
 	
 	//metoda koja dodaje integer na postojeci string
 	public MyStringBuilder1 append(int i) {
 		String temp = "";
-		
-		while(i != 0) {
-			temp = i % 10 + temp;
-			i /= 10;
-		}
-		return new MyStringBuilder1(this.s + temp);
+		temp = temp + i+"";
+		temp = this.s + temp;
+		return new MyStringBuilder1(temp);
 	}
 	
 	//metoda koja vraca duzinu stringa
