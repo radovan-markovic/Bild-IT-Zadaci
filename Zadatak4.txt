@@ -1,0 +1,4 @@
+Test
+cetvrtog zadatka,
+brojanje rijeci, karaktera
+i linija u fajlu.
